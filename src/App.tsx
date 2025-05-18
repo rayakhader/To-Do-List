@@ -27,7 +27,6 @@ function App() {
     completed:boolean
   }
   const [tasks, setTasks] = useState<Task[]>(initialTasks);
-  // will change later 
   function handleComleteTask(id:number) {
     setTasks(tasks.map(t => t.id === id ? { ...t, completed: !t.completed } : t));
   }

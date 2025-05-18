@@ -1,27 +1,50 @@
 .App{
   padding: 10px;
+  background-color: rgba(0,0,0,0.03);
 }
 .tasks-container{
   display: flex;
   flex-direction: column;
   padding: 10px;
-  border: 1px solid black;
+  border: 1px solid #ccc;
+  box-shadow:10px 10px 10px rgba(0,0,0,0.1);
   border-radius: 5px;
   height: 600px;
   overflow-y: auto;
+  width: 50%;
+  margin: auto;
+  background-color: white;
 }
 .task{
+  display: flex;
+  align-items: center;
+  gap: 10px;
   padding:10px;
   border:1px solid #ccc;
   margin:10px;
-  border-radius:5px;
+  border-radius: 20px;
   background-color:#f9f9f9;
+}
+.task input{
+  width: 18px;
+  height: 18px;
+  accent-color: green;
+  cursor: pointer;}
+.completed{
+  text-decoration: line-through;
+  color: gray;
+  background-color: rgb(224, 239, 224);
 }
 .header
 {
   display: flex;
   align-items: center;
+  position: sticky;
+  top: 0;
  justify-content: space-between;
+}
+.header h2{
+  letter-spacing: 3px;
 }
 .header input{
   padding: 10px;
