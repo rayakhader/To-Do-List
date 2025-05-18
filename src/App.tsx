@@ -38,10 +38,12 @@ function App() {
     }
     setTasks([...tasks, newTask]);
   }
+  function handleDeleteTask(id:number) {
+    setTasks(tasks.filter(t => t.id !== id));
+  }
   return (
     <div className="App">
-      <h1>To Do List</h1>
-      <TasksContainer tasks={tasks} onComplete={handleComleteTask} onAdd={handleAddTask}/>
+      <TasksContainer tasks={tasks} onComplete={handleComleteTask} onAdd={handleAddTask} onDelete={handleDeleteTask}/>
     </div>
   );
 }
