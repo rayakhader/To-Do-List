@@ -1,12 +1,12 @@
 import React from 'react'
 
-function Task({task, onComplete}) {
+function Task({task, onComplete, onDelete}) {
   return (
    <div key={task.id} className={`task ${task.completed ? 'completed' : ''}`}>
-            <h2>{task.title}</h2>
-            <p>{task.description}</p>
-            <button onClick={onComplete}>
-              {task.completed ? 'Undo' : 'Complete'}
+            <input type="checkbox" checked={task.completed} onChange={() => onComplete(task.id)} />
+            <p className={`task-description ${task.completed ? 'done' : ''}`}>{task.description}</p>
+            <button className='delete-task' onClick={() => onDelete(task.id)}>
+                Delete  
             </button>
           </div>
   )
